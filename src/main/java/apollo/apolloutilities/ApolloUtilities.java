@@ -1,17 +1,12 @@
 package apollo.apolloutilities;
 
-
-import jdk.vm.ci.code.Register;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
-
-
 public final class ApolloUtilities extends JavaPlugin implements Listener {
-
 
     @Override
     public void onEnable() {
@@ -32,4 +27,3 @@ public final class ApolloUtilities extends JavaPlugin implements Listener {
         System.out.println("Apollo Utilities Is Saving Data Then Shutting Down!");
     }
 }
-
