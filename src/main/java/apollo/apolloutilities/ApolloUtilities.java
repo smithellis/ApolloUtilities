@@ -32,13 +32,6 @@ public final class ApolloUtilities extends JavaPlugin implements Listener{
         event.setJoinMessage(ChatColor.LIGHT_PURPLE + "Welcome to the Apollo Network " + ChatColor.GREEN + event.getPlayer().getDisplayName() + ChatColor.LIGHT_PURPLE + "!");
     }
 
-    @EventHandler
-    public final Enchantment DAMAGE_ALL;
-    @EventHandler
-    public void onItemCrafted (PrepareItemCraftEvent e) {
-        e.getInventory().setResult(new ItemStack(Material.DIAMOND_SWORD).addEnchantment(Enchantment.getByKey(new NamespacedKey(EnchantmentWrapper.DAMAGE_ALL)));
-    }
-
     @Override
     public void onDisable() {
         // Plugin shutdown logic
