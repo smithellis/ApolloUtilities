@@ -1,0 +1,5 @@
+name: ApolloUtilities
+version: '${project.version}'
+main: apollo.apolloutilities.ApolloUtilities
+api-version: 1.18
+authors: [ Herculuke ]
