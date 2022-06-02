@@ -17,7 +17,7 @@ public final class ApolloUtilities extends JavaPlugin implements Listener {
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
-        System.out.println("Welcome to the Apollo Network " + event.getPlayer().getName());
+        event.setJoinMessage("Welcome to the Apollo Network " + event.getPlayer().getName());
     }
 
 
