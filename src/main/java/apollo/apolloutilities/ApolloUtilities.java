@@ -1,40 +1,32 @@
 package apollo.apolloutilities;
 
-import org.bukkit.ChatColor;
-import org.bukkit.Material;
-import org.bukkit.NamespacedKey;
-import org.bukkit.enchantments.Enchantment;
-import org.bukkit.enchantments.EnchantmentTarget;
-import org.bukkit.enchantments.EnchantmentWrapper;
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.entity.PiglinBarterEvent;
-import org.bukkit.event.inventory.CraftItemEvent;
-import org.bukkit.event.inventory.PrepareItemCraftEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.Locale;
+import java.util.Objects;
 
-public final class ApolloUtilities extends JavaPlugin implements Listener{
+public final class ApolloUtilities extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
         // Plugin startup logic
-        System.out.println(ChatColor.GOLD + "Apollo Utilities Is Running Correctly!");
-        getServer().getPluginManager().registerEvents(this,this);
+        System.out.println("Apollo Utilities Is Running Correctly!");
+        Objects.requireNonNull(getServer().getPluginCommand("mark-location")).setExecutor(new TowerExecutor());
+
     }
 
     @EventHandler
-    public void onPlayerJoin(PlayerJoinEvent event){
-        event.setJoinMessage(ChatColor.LIGHT_PURPLE + "Welcome to the Apollo Network " + ChatColor.GREEN + event.getPlayer().getDisplayName() + ChatColor.LIGHT_PURPLE + "!");
+    public void onPlayerJoin(PlayerJoinEvent event) {
+        getServer().getPluginManager().registerEvents(this, this);
+        event.setJoinMessage("Hey there, shizzle.");
     }
+
 
     @Override
     public void onDisable() {
         // Plugin shutdown logic
-        System.out.println(ChatColor.GOLD + "Apollo Utilities Is Saving Data Then Shutting Down!");
+        System.out.println("Apollo Utilities Is Saving Data Then Shutting Down!");
     }
 }

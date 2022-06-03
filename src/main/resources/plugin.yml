@@ -3,3 +3,14 @@ version: '${project.version}'
 main: apollo.apolloutilities.ApolloUtilities
 api-version: 1.18
 authors: [ Herculuke ]
+
+
+# defining our commands.
+commands:
+  # create a new command called mark-location.
+  mark-location:
+    description: create a 50 block tall cobblestone tower to mark a location
+    # show to the player how they should call the command. You would also show arguments here.
+    usage: /<command>
+    # create other names we can call the command by.
+    aliases: [mark, tower]
