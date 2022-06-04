@@ -25,6 +25,7 @@ public final class ApolloUtilities extends JavaPlugin implements Listener{
         getCommand("hub").setExecutor(commands);
         getCommand("stream").setExecutor(commands);
         getCommand("ranks").setExecutor(commands);
+        getCommand("goaway").setExecutor(commands);
     }
 
     //event when player joins (sets a new join message with color)
