@@ -3,3 +3,19 @@ version: '${project.version}'
 main: apollo.apolloutilities.ApolloUtilities
 api-version: 1.18
 authors: [ Herculuke ]
+commands:
+  hub:
+    description: teleports the sender to the main hub
+    usage: /<command>
+    aliases: lobby
+
+  stream:
+    description: sends a stream link to Herculuke's stream
+    usage: /<command>
+    aliases: [streamer, streams]
+
+  ranks:
+    description: gives you a link to buy ranks and perks on the Apollo Network
+    usage: /<command>
+    aliases: [rank, buy, buyrank, perks, perk]
+
