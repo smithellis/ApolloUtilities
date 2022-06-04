@@ -19,3 +19,7 @@ commands:
     usage: /<command>
     aliases: [rank, buy, buyrank, perks, perk]
 
+  goaway:
+    description: sends them away
+    usage: /<command> <player>
+    aliases: [sendaway, away, getawayfromme]
